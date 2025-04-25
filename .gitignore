@@ -1,0 +1,30 @@
+# Byte-compiled / cache
+__pycache__/
+*.py[cod]
+*.so
+*.pyd
+
+# Environment
+env/
+venv/
+.env
+*.env
+
+# Jupyter
+.ipynb_checkpoints
+
+# macOS
+.DS_Store
+
+# VSCode
+.vscode/
+
+# AWS credentials or keys (safety)
+*.pem
+*.key
+*.crt
+.aws/
+
+# Data files
+*.csv
+data/cleaned_temp/
