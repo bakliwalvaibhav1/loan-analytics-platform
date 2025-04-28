@@ -1,1 +1,1 @@
-# loan-analytics-platform
+# Loan Analytics Platform
