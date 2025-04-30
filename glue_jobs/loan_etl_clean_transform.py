@@ -1,3 +1,7 @@
+# This script is used in AWS Glue Console for the job: loan-etl-clean-transform
+# Source: Glue Table - loan_analytics_db.cleaned_loan_data_csv
+# Output: S3 - s3://<your-bucket>/processed/
+
 import sys
 from awsglue.transforms import *
 from awsglue.utils import getResolvedOptions
@@ -34,7 +38,7 @@ dynamic_filtered = DynamicFrame.fromDF(filtered_df, glueContext, "dynamic_filter
 glueContext.write_dynamic_frame.from_options(
     frame=dynamic_filtered,
     connection_type="s3",
-    connection_options={"path": "s3://your-bucket-name/processed/"},
+    connection_options={"path": "s3://loan-analytics-data/processed/"},
     format="parquet"
 )
 
